@@ -8,6 +8,7 @@ import Styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { MdHelp, MdOutlineWavingHand, MdEmail } from "react-icons/md";
 import imgback from "../../assets/images/login-background.png"
+import { getGoogleUrl } from "./getGoogleUrl";
 import {
   superAdmin,
   admin,
@@ -183,7 +184,7 @@ function LoginForm() {
           <div className="d-flex justify-content-center">
           <div
             className="google-btn"
-            onClick={() => navigate("/signup")}
+            onClick={() => getGoogleUrl("/profile")}
           >
             <img src={require("../../assets/icons/google-icon.png")} alt="google-icon" />
             Google
@@ -356,6 +357,4 @@ input:focus{
   font-size:25px;
   
 }
-
-
 `;
